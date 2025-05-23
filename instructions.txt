@@ -1,0 +1,29 @@
+##Download SonarQube IDE in IntelliJ IDE
+
+##Report Generation
+docker run -d --name sonarqube \
+  -p 9000:9000 \
+  sonarqube:community
+
+localhost:9000
+
+
+default credentials
+admin
+admin
+
+Update password to something meeting requirement
+
+Go to My account --> Security and Generate Token ... I tried Global Analysis Token
+
+We need the token for the sonar-project.properties file
+
+Hehe it's telling me adding the secret directly is bad code ... Cool~
+
+Download sonar-scanner and add to PATH... for me it was just brew install
+
+Then go to project root.. where sonar-project.properties is kept and run the command..
+
+sonar-scanner
+
+Finally, go to localhost:9000 to view the report
